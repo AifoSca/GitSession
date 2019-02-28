@@ -44,4 +44,4 @@ In Distributed VCS, every contributor has a local copy or “clone” of the mai
 
 ## Revert and Reset
 
-
+## Cherry-pick
