@@ -117,6 +117,7 @@ F --> G(m2)
 G --> H(m3)
 H --> L(?)
 ```
+![diagram](squash.png)
 
 And Now this in the **feature** branch
 
@@ -136,7 +137,7 @@ H --> L(f1)
 L --> P(f2)
 
 ```
-
+![diagram](rebase.png)
 
 ## Revert and Reset
 
