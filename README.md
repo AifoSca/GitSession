@@ -19,6 +19,7 @@ In Distributed VCS, every contributor has a local copy or “clone” of the mai
 
 - Remote Repository: Push, Pull command happen
 
+Git LOG explanation
 
 ### What Origin means?
 
@@ -51,23 +52,55 @@ In Distributed VCS, every contributor has a local copy or “clone” of the mai
 ## Git Basic commands!!
 | Git Command | 	Explanation											    |
 | --------   |--------------------------------------------------------------|
+| git help <command>| Similar to man                                        |
 | git init   | 	 Initialize Local Git repository                            |
 | git config  --global user.name 'your.name' | 	Adds name   |
 | git config --global user.email 'your.email' |	Adds email |
 | git add	 | Add Files to index |
 | git status |	Check the status of Working Tree|
-| git commit |	Commit Changes In Index  |
+| git commit |	Commit Changes In Index (git commit --amend) |
 | git push	 | Push to Remote repository  |
 | git pull	 | Pull latest from remote repository |
 | git clone	 | Clone repository into a new directory |
 | git log    | lists commit log |
 | git diff 	 | difference between |
 
+### Let's do a small exercise 
 
+ 1. Clone this repo (if you haven't)
+ 2. Create a new LOCAL branch
+ 3. Make same changes in a new file!
+ 4. Commit Locally those changes! :)
+ 
+### How do merge conflict happen?
+
+A merge conflict occurs when there are 2 changes to the same part of the code.
+
+```mermaid
+graph TD
+A[master] --> B(branch1)
+A --> C(branch2)
+B --change file.txt--> H((merge into master first))
+C --change file.txt--> J((merge into master second))
+H --without conflict--> K{master}
+J --with CONFLICT--> K{master}
+```
+
+Git can always directly merge a piece of code _if only one side of the merge changed it_ in this case when we merge branch1 into master we change the base for branch2 that why it only gave problems when we merged branch2.
 
 ## .gitignore?...and what about git stash?
 
+    **gitignore** file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not
+affected; see the NOTES below for details.
+    Each line in a gitignore file specifies a pattern. When deciding whether to ignore a path, Git normally checks gitignore
+patterns from multiple sources, with the following order of precedence, from highest to lowest.
+
+     **git stash** used when you want to record the current state of the working directory and the index, but want to **go back to a clean** working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
+
+
 ## Merge vs Rebase
+
+
 
 ## Revert and Reset
 
