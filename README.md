@@ -20,6 +20,33 @@ In Distributed VCS, every contributor has a local copy or “clone” of the mai
 - Remote Repository: Push, Pull command happen
 
 
+### What Origin means?
+
+**ORIGIN**  is an **alias**  *_on your system_* for a particular remote repository. It's not actually a property of that repository.
+
+    [ ~/GitSession ]
+    $ git remote -v      # show the name for the remote branch/repo
+    origin  https://github.com/AifoSca/GitSession.git (fetch)
+    origin  https://github.com/AifoSca/GitSession.git (push)
+
+    ### How can you push in this situation
+    $ git push origin master 
+    or
+    $ git push https://github.com/AifoSca/GitSession.git master
+
+    ### Renaming the remote repository
+    [ ~/GitSession ]
+    $ git remote rename origin remote_repo    # to change the name
+    [ ~/GitSession ]
+    $ git remote -v
+    remote_repo     https://github.com/AifoSca/GitSession.git (fetch)
+    remote_repo     https://github.com/AifoSca/GitSession.git (push)
+    
+    ### How can you push in this situation
+    $ git push remote_repo master
+    or
+    $ git push https://github.com/AifoSca/GitSession.git master
+
 
 ## Git Basic commands!!
 | Git Command | 	Explanation											    |
