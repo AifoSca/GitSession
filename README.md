@@ -85,17 +85,16 @@ C --change file.txt--> J((merge into master second))
 H --without conflict--> K{master}
 J --with CONFLICT--> K{master}
 ```
+![diagram](conflit.png)
 
 Git can always directly merge a piece of code _if only one side of the merge changed it_ in this case when we merge branch1 into master we change the base for branch2 that why it only gave problems when we merged branch2.
 
 ## .gitignore?...and what about git stash?
 
-    **gitignore** file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not
-affected; see the NOTES below for details.
-    Each line in a gitignore file specifies a pattern. When deciding whether to ignore a path, Git normally checks gitignore
-patterns from multiple sources, with the following order of precedence, from highest to lowest.
+**gitignore** file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected; see the NOTES below for details.
+Each line in a gitignore file specifies a pattern. When deciding whether to ignore a path, Git normally checks gitignore patterns from multiple sources, with the following order of precedence, from highest to lowest.
 
-     **git stash** used when you want to record the current state of the working directory and the index, but want to **go back to a clean** working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
+**git stash** used when you want to record the current state of the working directory and the index, but want to **go back to a clean** working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
 
 
 ## Merge vs Rebase
