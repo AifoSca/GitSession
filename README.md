@@ -103,39 +103,12 @@ Small exercise
 
 please achieve this IN the **master** branch:
 
-```mermaid
-graph LR
-master -->  A(m1)
-A --> B(m2)
-B --> K(m3)
-feature --> C(f1)
-C --> D(f2)
-master+feature --> F(m1)
 
-F --> G(m2)
-G --> H(m3)
-H --> L(?)
-```
-![diagram](squash.png)
+![diagram](merge_squash.png)
 
 And Now this in the **feature** branch
 
 
-```mermaid
-graph LR
-master -->  A(m1)
-A --> B(m2)
-B --> K(m3)
-feature --> C(f1)
-C --> D(f2)
-master+feature --> F(m1)
-
-F --> G(m2)
-G --> H(m3)
-H --> L(f1)
-L --> P(f2)
-
-```
 ![diagram](rebase.png)
 
 ## Revert and Reset
