@@ -104,7 +104,7 @@ Small exercise
 please achieve this IN the **master** branch:
 
 
-![diagram](merge_squash.png)
+![diagram](merge_squash.PNG)
 
 And Now this in the **feature** branch
 
